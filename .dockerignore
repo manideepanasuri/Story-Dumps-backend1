@@ -1,0 +1,42 @@
+# Ignore Git-related files
+.git
+.gitignore
+
+# Ignore Python-related files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+# virtualenv environments
+pip-log.txt
+pip-delete-this-arg.txt
+
+# Ignore editor/IDE specific files
+.vscode/
+.idea/
+*.swp
+*.bak
+*.swo
+
+# Ignore packaging artifacts
+*.egg-info/
+.coverage
+.pytest_cache/
+htmlcov/
+dist/
+build/
+*.whl
+
+
+# Ignore Docker-related files (except Dockerfile itself)
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+.env
+
+.venv

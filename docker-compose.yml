@@ -1,0 +1,13 @@
+
+
+services:
+  fastapi-app:
+    image: storydumpa-backend11  # Use your prebuilt image
+    container_name: fastapi-app
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: always

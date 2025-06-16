@@ -2,8 +2,9 @@
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
 from helpers import *
-from fastapi.responses import JSONResponse
 from dotenv import load_dotenv
+from mangum import Mangum
+
 load_dotenv()
 app=FastAPI()
 
@@ -43,3 +44,5 @@ def read_root(data: Data,access_token: str = Header(..., alias="access_token")):
     except Exception as e:
         print(e)
         raise HTTPException(status_code=500, detail=f"{e}")
+
+handler = Mangum(app)
