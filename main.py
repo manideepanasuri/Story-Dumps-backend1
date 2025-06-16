@@ -17,7 +17,7 @@ class Data(BaseModel):
 
 
 @app.post("/")
-def read_root(data: Data,access_token: str = Header(..., alias="access_token",convert_underscores=False)):
+def read_root(data: Data,access_token: str = Header(..., alias="access-token")):
     print("hi")
     if access_token!=os.environ.get("GENERATE_VIDEO_SECRET"):
 
